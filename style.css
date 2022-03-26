@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600;700&family=Lato:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --skyblue: #87ceeb;
+  --orange: #e0972e;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  color: var(--white);
+  background: var(--skyblue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body::after {
+  content: "";
+  background: var(--skyblue) url("images/guitarists.jpg") no-repeat center/cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  min-height: 100vh;
+}
+
+/** global classes styling **/
+
+.container {
+  width: 100%;
+  max-width: 56rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  background: var(--skyblue);
+  padding: 1.25rem 3rem;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 600;
+  border-radius: 15px;
+  font-size: 1.4rem;
+}
+
+/** nav bar **/
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6.5rem;
+  width: 100%;
+  background: var(--skyblue);
+}
+
+#header-img {
+  width: 250px;
+  padding: 1.5rem 1rem 3rem 3rem;
+}
+
+#company-name {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--white);
+  text-shadow: 1px 2px var(--orange);
+  padding-top: 1.75rem;
+  font-family: "Advent Pro", sans-serif;
+}
+
+/* -- title and form -- */
+
+.title {
+  font-size: 5.75rem;
+  font-weight: 700;
+  font-family: "Advent Pro", sans-serif;
+  margin-top: 10rem;
+}
+
+input {
+  width: 100%;
+  padding: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+#submit {
+  background: var(--orange);
+  color: var(--white);
+  margin-bottom: 3rem;
+}
+
+#info {
+  color: var(--black);
+  width: 56rem;
+  font-size: 1.8rem;
+  margin-bottom: 3.5rem;
+  background: rgb(255, 255, 255, 0.6);
+  padding: 3rem 3rem 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#info p {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+#pricing {
+  width: 56rem;
+  display: flex;
+  background: var(--white);
+  color: var(--black);
+  margin-top: 5rem;
+}
+
+.product {
+  flex-basis: 1;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.product {
+  width: 100%;
+}
+
+footer,
+footer ul li {
+  color: var(--black);
+}
+
+@media (min-width: 600px) {
+}
