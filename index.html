@@ -5,30 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Landing Page | freeCodeCamp Certification Project</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header id="header">
-      <nav>
-        <div class="nav-center flex">
-          <img id="header-img" src="images/ekg.png" alt="logo" />
-          <span id="company-name">Guitar Soul</span>
+      <!-- navbar -->
+      <nav id="nav-bar">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="images/ekg.png" id="header-img" alt="logo" />
+            <span id="company-name">Guitar Soul</span>
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#features" class="nav-link">features</a>
+              </li>
+              <li>
+                <a href="#demo" class="nav-link">demo</a>
+              </li>
+              <li>
+                <a href="#pricing" class="nav-link">pricing</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- <div id="nav-bar">
-          <ul class="flex">
-            <li>Features<a href="#features" class="nav-link"></a></li>
-            <li>Demo<a href="#demo" class="nav-link"></a></li>
-            <li>Pricing<a href="#pricing" class="nav-link"></a></li>
-          </ul>
-        </div> -->
       </nav>
     </header>
 
-    <h1 class="title">Hand-made guitars tuned with soul</h1>
-
+    <!-- content -->
     <div class="container">
-      <section class="hero">
+      <h1>Hand-made guitars tuned with soul</h1>
+      <!-- form -->
+      <section class="form">
         <form action="https://www.freecodecamp.com/email-submit" id="form">
           <input
             id="email"
@@ -46,8 +67,12 @@
           />
         </form>
       </section>
-      <main>
-        <section id="info">
+
+      <!-- main content -->
+      <main class="main">
+        <!-- features -->
+        <section id="features">
+          <!-- materials -->
           <div class="materials">
             <h2>Premium Materials</h2>
             <p>
@@ -55,6 +80,8 @@
               esse natus sunt hic, id sapiente!
             </p>
           </div>
+          <!-- end of materials -->
+          <!-- shipping -->
           <div class="shipping">
             <h2>Fast Shipping</h2>
             <p>
@@ -62,6 +89,8 @@
               esse natus sunt hic, id sapiente!
             </p>
           </div>
+          <!-- end of shipping -->
+          <!-- quality -->
           <div class="quality">
             <h2>Quality Assurance</h2>
             <p>
@@ -69,8 +98,11 @@
               esse natus sunt hic, id sapiente!
             </p>
           </div>
+          <!-- end of quality -->
         </section>
+        <!-- end of features -->
 
+        <!-- demo -->
         <section id="demo">
           <iframe
             id="video"
@@ -84,8 +116,11 @@
           >
           </iframe>
         </section>
+        <!-- end of demo -->
 
+        <!-- pricing -->
         <section id="pricing">
+          <!-- single product -->
           <div class="product">
             <h3 class="product-name">Martin D-42</h3>
             <span class="product-price">$xxx</span>
@@ -95,6 +130,8 @@
             </p>
             <button class="btn">Select</button>
           </div>
+          <!-- end of single product -->
+          <!-- single product -->
           <div class="product">
             <h3 class="product-name">Taylor 716</h3>
             <span class="product-price">$xxx</span>
@@ -104,16 +141,23 @@
             </p>
             <button class="btn">Select</button>
           </div>
+          <!-- end of single product -->
         </section>
+        <!-- end of pricing -->
       </main>
+      <!-- end of main content -->
     </div>
+    <!-- end of content -->
+
+    <!-- footer -->
     <footer>
-      <ul>
+      <ul class="links">
         <li><a href="#">Privacy</a></li>
         <li><a href="#">Terms</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <span>Copyright 2022, Guitar Soul</span>
+      <p>copyright &copy; 2022, Guitar Soul. all rights reserved</p>
     </footer>
+    <!-- end of footer -->
   </body>
 </html>
