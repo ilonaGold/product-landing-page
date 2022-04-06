@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600;700&family=Lato:wght@400;700&display=swap");
 
+:root {
+  --skyblue: #87ceeb;
+  --orange: #e0972e;
+  --white: #ffffff;
+  --black: #000000;
+  --lighter-black: rgb(0, 0, 0, 0.6);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +16,7 @@
 
 html {
   font-size: 62.5%;
-}
-
-:root {
-  --skyblue: #87ceeb;
-  --orange: #e0972e;
-  --white: #ffffff;
-  --black: #000000;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -30,6 +32,13 @@ a {
   text-decoration: none;
   color: var(--white);
 }
+
+h1, h2 {
+  text-transform: capitalize;
+}
+
+
+/** global classes styling **/
 
 body {
   font-family: "Lato", sans-serif;
@@ -54,19 +63,13 @@ body::after {
   min-height: 100vh;
 }
 
-/** global classes styling **/
-
 .container {
   width: 100%;
-  max-width: 56rem;
+  max-width: 60rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 2rem 1rem;
-}
-
-.flex {
-  display: flex;
 }
 
 .btn {
@@ -79,40 +82,76 @@ body::after {
   font-weight: 600;
   border-radius: 15px;
   font-size: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
 
 /** nav bar **/
 
-#header {
+#header,
+#nav-bar {
   position: fixed;
   top: 0;
   left: 0;
-  height: 6.5rem;
+}
+
+#nav-bar {
   width: 100%;
+  height: 6.5rem;
   background: var(--skyblue);
 }
 
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 55rem;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-right: 10rem;
+}
+
 #header-img {
-  width: 250px;
-  padding: 1.5rem 1rem 3rem 3rem;
+  width: 300px;
+  padding: 0.75rem 3rem;
 }
 
 #company-name {
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 600;
   color: var(--white);
   text-shadow: 1px 2px var(--orange);
-  padding-top: 1.75rem;
   font-family: "Advent Pro", sans-serif;
 }
 
+
 /* -- title and form -- */
 
-.title {
-  font-size: 5.75rem;
+h1 {
+  font-size: 6rem;
   font-weight: 700;
   font-family: "Advent Pro", sans-serif;
-  margin-top: 10rem;
+  text-align: center;
+  line-height: 1.1;
+  margin: 6rem 0 3.5rem;
 }
 
 input {
@@ -127,46 +166,85 @@ input {
   margin-bottom: 3rem;
 }
 
-#info {
-  color: var(--black);
-  width: 56rem;
-  font-size: 1.8rem;
-  margin-bottom: 3.5rem;
-  background: rgb(255, 255, 255, 0.6);
-  padding: 3rem 3rem 2rem;
+#submit:hover,
+#submit:focus {
+  background: var(--lighter-black);
+  color: var(--orange);
+  border: 1px solid var(-orange);
+
+}
+
+
+/* features */
+
+#features {
+  background: var(--lighter-black);
+  padding: 3rem 4rem 1.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
+  color: var(--orange);
+  margin-bottom: 0.5rem;
 }
 
-#info p {
-  margin-bottom: 1.5rem;
-  font-size: 1.6rem;
+p {
+  margin-bottom: 2rem;
 }
+
+
+/* pricing cards */
 
 #pricing {
-  width: 56rem;
   display: flex;
-  background: var(--white);
-  color: var(--black);
-  margin-top: 5rem;
-}
-
-.product {
-  flex-basis: 1;
-  text-align: center;
   justify-content: space-between;
+  color: var(--black);
+  margin: 3.5rem 0 1.5rem;
 }
 
 .product {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 46%;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 7px;
+ }
+
+ h3 {
+   margin-bottom: 0.5rem;
+ }
+
+ .product-price {
+   margin-bottom: 0.75rem;
+   font-weight: 600;
+   color: var(--orange);
+   text-shadow: 1px 0.75px var(--lighter-black);
+ }
+
+ .btn-select {
+    color: var(--white);
+    text-shadow: 1px 0.75px var(--lighter-black);
 }
 
-footer,
-footer ul li {
+
+/* footer */
+
+footer {
   color: var(--black);
 }
 
-@media (min-width: 600px) {
+.footer-links {
+  display: flex;
+  justify-content: space-around;
 }
+
+.copyright {
+  margin: 1rem 0 1.5rem;
+}
+
+span {
+  margin-right: 1.5rem;
+}
+
+
