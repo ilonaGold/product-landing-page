@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page | freeCodeCamp Certification Project</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+        <header id="header">
+      <!-- logo -->
+        <div class="logo">
+          <img src="images/ekg.png" id="header-img" alt="logo"/>
+          <span id="company-name">Guitar Soul</span>
+        </div>
+        <!-- navbar -->
+        <nav id="nav-bar">
+        <!-- nav links -->
+            <ul class="nav-links">
+              <li>
+                <a href="#home" class="nav-link">Home</a>
+              </li>
+              <li>
+                <a href="#features" class="nav-link">Features</a>
+              </li>
+              <li>
+                <a href="#demo" class="nav-link">Demo</a>
+              </li>
+              <li>
+                <a href="#pricing" class="nav-link">Pricing</a>
+              </li>
+            </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- content -->
+    <div class="container" id="home">
+      <h1>Hand-made guitars tuned with soul</h1>
+      <!-- form -->
+      <section class="form">
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          />
+          <input
+            id="submit"
+            type="submit"
+            value="Get Started"
+            class="btn"
+          />
+        </form>
+      </section>
+
+      <!-- main content -->
+      <main class="main">
+        <!-- features -->
+        <section id="features">
+          <!-- materials -->
+          <div class="materials">
+            <h2>
+              <span><i class="fas fa-tree"></i></span>Premium Materials
+            </h2>
+            <p>
+              I'm baby affogato humblebrag air plant tofu, kitsch prism echo
+              park taiyaki brooklyn deep v.
+            </p>
+          </div>
+          <!-- end of materials -->
+          <!-- shipping -->
+          <div class="shipping">
+            <h2>
+              <span><i class="fas fa-truck"></i></span>Fast Shipping
+            </h2>
+            <p>
+              IPhone church-key retro thundercats shaman mlkshk tote bag. Hella
+              hell of freegan humblebrag.
+            </p>
+          </div>
+          <!-- end of shipping -->
+          <!-- quality -->
+          <div class="quality">
+            <h2>
+              <span><i class="fas fa-award"></i></span>Quality Assurance
+            </h2>
+            <p>
+              Occupy beard adaptogen marfa cliche YOLO sartorial listicle
+              kinfolk pok pok blog.
+            </p>
+          </div>
+          <!-- end of quality -->
+        </section>
+        <!-- end of features -->
+
+        <!-- demo -->
+        <section id="demo">
+          <iframe
+            id="video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/QIrV9t7XAZY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </section>
+        <!-- end of demo -->
+
+        <!-- pricing -->
+        <section id="pricing">
+          <!-- single product -->
+          <div class="product">
+            <h3 class="product-name">Martin D-42</h3>
+            <span class="product-price">$6,199</span>
+            <p class="product-description">
+              Tacos laborum sed in schlitz. Synth post-ironic nostrud ad you
+              probably haven't heard of them in cupidatat narwhal nulla ramps
+              cred pariatur everyday carry.
+            </p>
+            <button class="btn btn-select pulse-grow-on-hover">Select</button>
+          </div>
+          <!-- end of single product -->
+          <!-- single product -->
+          <div class="product">
+            <h3 class="product-name">Taylor 716</h3>
+            <span class="product-price">$3,299</span>
+            <p class="product-description">
+              Freegan vexillologist locavore 3 wolf moon, photo booth poutine
+              you probably haven't heard of them. Disrupt artisan cardigan
+              everyday carry vape lorem vegan.
+            </p>
+            <button class="btn btn-select pulse-grow-on-hover">Select</button>
+          </div>
+          <!-- end of single product -->
+        </section>
+        <!-- end of pricing -->
+      </main>
+      <!-- end of main content -->
+    </div>
+    <!-- end of content -->
+
+    <!-- footer -->
+    <footer>
+      <ul class="footer-links">
+        <li><a href="#" class="footer-link">Privacy</a></li>
+        <li><a href="#" class="footer-link">Terms</a></li>
+        <li><a href="#" class="footer-link">Contact</a></li>
+      </ul>
+      <p class="copyright">
+        Copyright &copy; 2024, Guitar Soul. All rights reserved
+      </p>
+    </footer>
+    <!-- end of footer -->
+     <script src="index.js"></script>
+  </body>
+</html>
