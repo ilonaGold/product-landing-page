@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600;700&family=Lato:wght@400;700&display=swap");
+
+:root {
+  --skyblue: #87ceeb;
+  --orange: #fec740;
+  --white: #ffffff;
+  --black: #000000;
+  --lighter-black: rgb(0, 0, 0, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+h1, h2 {
+  text-transform: capitalize;
+}
+
+/** global classes styling **/
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  color: var(--white);
+  background: var(--skyblue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+body::after {
+  content: "";
+  background: var(--skyblue) url("images/guitarists.jpg") no-repeat center/cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem 1rem;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  background: var(--skyblue);
+  padding: 1.25rem 3rem;
+  text-transform: uppercase;
+  border: none;
+  font-weight: 600;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/** navbar **/
+
+#header {
+  width: 100%;
+  height: 6.5rem;
+  background: var(--skyblue);
+  border-bottom: 1px double var(--orange);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  width: 270px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+line-height: 6.5rem;
+margin-left: 3rem;
+}
+
+#nav-bar {
+  width: 30%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 6.5rem;
+  text-shadow: 1px 0.75px var(--lighter-black);
+}
+
+.nav-links a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  padding-bottom: 1rem;
+  color: var(--orange);
+}
+
+#header-img {
+  width: 150px;
+}
+
+#company-name {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--white);
+  text-shadow: 2px 2px var(--orange);
+  font-family: "Advent Pro", sans-serif;
+}
+
+/* -- dropdown menu -- */
+.fa-bars,
+.fa-times {
+  display: none;
+  position: absolute;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.fa-bars {
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 3.5rem;
+}
+
+.fa-times {
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+/* -- title and form -- */
+
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  font-family: "Advent Pro", sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px var(--lighter-black);
+  line-height: 1.1;
+  margin: 6rem 0 3.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+#submit {
+  background: var(--orange);
+  color: var(--white);
+  margin-bottom: 3rem;
+  transition: all 1s ease;
+}
+
+#submit:hover,
+#submit:focus {
+  background: var(--lighter-black);
+  color: var(--orange);
+  cursor: pointer;
+}
+
+
+/* features */
+
+#features {
+  background: var(--lighter-black);
+  padding: 2.75rem 4rem 1.5rem;
+  margin-top: 3.25rem;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+h2 {
+  font-size: 2.25rem;
+  color: var(--orange);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+
+/* pricing cards */
+
+#pricing {
+  display: flex;
+  justify-content: space-between;
+  color: var(--black);
+  margin: 2.2rem 0 1rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 46%;
+  background: var(--white);
+  padding: 1.5rem 2.5rem;
+  border-radius: 7px;
+ }
+
+ h3 {
+   margin-bottom: 0.5rem;
+ }
+
+ .product-price {
+   margin-bottom: 0.75rem;
+   font-weight: 600;
+   color: var(--orange);
+   text-shadow: 1px 0.75px var(--lighter-black);
+ }
+
+ .btn-select {
+    color: var(--white);
+    text-shadow: 1px 0.75px var(--lighter-black);
+}
+
+.btn-select:hover,
+ .btn-select:focus {
+   cursor: pointer;
+   background: var(--orange);
+}
+
+@-webkit-keyframes pulse-grow-on-hover {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes pulse-grow-on-hover {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.pulse-grow-on-hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.pulse-grow-on-hover:hover, .pulse-grow-on-hover:focus, .pulse-grow-on-hover:active {
+  -webkit-animation-name: pulse-grow-on-hover;
+  animation-name: pulse-grow-on-hover;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+
+/* footer */
+
+footer {
+  color: var(--black);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--orange);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  text-shadow: 1px 0.75px var(--lighter-black);
+  margin-top: 1rem;
+}
+
+.footer-link {
+  margin: 3rem;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+}
+
+span {
+  margin-right: 1.5rem;
+}
+
+/* media queries */
+
+
+@media only screen and (max-width: 1000px) {
+  #nav-bar {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  h1 {
+    font-size: 4rem;
+  }
+   .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 2rem;
+    background: var(--skyblue);
+    box-shadow: 0px 4px 10px 0px var(--orange);
+    border-bottom-left-radius: 5px;
+  }
+  .fa-bars {
+    display: block;
+  }
+  .fa-times {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .fa-bars {
+    font-size: 2.75rem;
+    top: 2.2rem;
+    right: 3rem;
+  }
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+main,
+#demo iframe {
+  width: 500px;
+}
+}
+
+/* Work more on the sizes betweeb 375px and 550px */
+
+@media only screen and (max-width: 550px)  {
+  #header-ing {
+    width: 75px;
+  }
+  #company-name {
+    font: 0.75rem;
+    position: absolute;
+    top: 25%;
+    left: 24%;
+    }
+  main,
+  #demo iframe {
+    width: 450px;
+  }
+  .product {
+    flex-basis: 48%;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  main,
+  #demo iframe {
+    width: 350px;
+  }
+.copyright {
+  font-size: 1.25rem;
+}
+}
